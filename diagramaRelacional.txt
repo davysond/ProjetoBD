@@ -1,0 +1,34 @@
+licitacao (num, objeto, dataAbertura, edital, idModalidade, idComissao, idOrgao)
+	idModalidade C.E. modalidade, idComissao C.E. comissao e idOrgao C.E. orgao 
+
+
+fornecedor(cnpj, nome, email, endereco)
+telefone_fornecedor(cnpj, numero)
+	cnpj C.E. fornecedor
+
+
+proposta(id, vencedora, precoOfertado, numLicitacao, cnpjFornecedor) 
+	numLicitacao C.E. licitacao e cnpjFornecedor C.E. fornecedor
+
+
+aditivo(codigo, motivo, dataInicio, dataFim, valor, numContrato)
+	numContrato C.E. contrato
+
+
+produto(codBarra, decricao, unidadeMedida, qtd, valorUnitMax, numLicitacao, idProposta, numProcesso, codAditivo)
+	numLicitacao C.E. licitacao, idProposta C.E. proposta, numProcesso C.E. contrato e codAditivo C.E. aditivo
+
+
+modalidade(id)
+
+
+funcionario(mat, nome, telefone, email, codOrgao, supervisiona)
+	codOrgao e supervisiona C.E. orgao
+
+
+orgao(codigo, nome, email, endereco, telefone, matFuncionario)
+	matFuncionario C.E. funcionario
+
+
+contrato(numeroProcesso, dataInicio, dataFim, objeto, valor, numLicitacao, cnpjFornecedor)
+	numLicitacao C.E. licitacao e cnpjFornecedor C.E. fornecedor
