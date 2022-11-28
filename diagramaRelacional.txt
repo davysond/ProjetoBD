@@ -28,6 +28,7 @@ funcionario(mat, nome, telefone, email, codOrgao, supervisiona)
 
 comissao(id)
 
+
 orgao(codigo, nome, email, endereco, telefone, matFuncionario)
 	matFuncionario C.E. funcionario
 
@@ -35,7 +36,9 @@ orgao(codigo, nome, email, endereco, telefone, matFuncionario)
 contrato(numProcesso, dataInicio, dataFim, objeto, valor, numLicitacao, cnpjFornecedor)
 	numLicitacao C.E. licitacao e cnpjFornecedor C.E. fornecedor
 
-produtosLicitacal(numLicitacao, codBarra)
+n:m ----------------------------------------------------------------------------------------
+
+produtosLicitacao(numLicitacao, codBarra)
 	numLicitacao C.E. licitacao e codBarra C.E. produto
 
 propostaProdutos(idProposta, codBarra)
