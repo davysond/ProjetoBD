@@ -26,9 +26,30 @@ funcionario(mat, nome, telefone, email, codOrgao, supervisiona)
 	codOrgao e supervisiona C.E. orgao
 
 
+comissao(id)
+
+
 orgao(codigo, nome, email, endereco, telefone, matFuncionario)
 	matFuncionario C.E. funcionario
 
 
-contrato(numeroProcesso, dataInicio, dataFim, objeto, valor, numLicitacao, cnpjFornecedor)
+contrato(numProcesso, dataInicio, dataFim, objeto, valor, numLicitacao, cnpjFornecedor)
 	numLicitacao C.E. licitacao e cnpjFornecedor C.E. fornecedor
+
+n:m ----------------------------------------------------------------------------------------
+
+produtosLicitacao(numLicitacao, codBarra)
+	numLicitacao C.E. licitacao e codBarra C.E. produto
+
+propostaProdutos(idProposta, codBarra)
+	codBarra C.E. produto e idProposta C.E. proposta
+
+aditivoProdutos(codigo, codBarra)
+	codBarra C.E. produto e codigo C.E. aditivo
+
+produtosContrato(numProceso, codBarra)
+	codBarra C.E. produto e numProceso C.E. contrato
+
+funcionariosComissao(id, matFuncionario)
+	id C.E. comissa  e matFuncionario C.E. funcionario
+
