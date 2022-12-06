@@ -1,3 +1,16 @@
+/* Grupo 5 - Banco de Dados I
+
+Alunos:
+
+- Davyson Douglas Gomes Guimarães - 119210872.
+- Henrique Dias Oliveira de Nóbrega - 120210069.
+- José Artur Procopio Coelho - 120210625.
+- Lucas Riberio Agra Alexandre - 119210120.
+- Paulo Victor Machado de Souza - 120110398.
+- Victor Alexandre Cavalcanti Macedo - 120210046.
+
+*/
+
 CREATE TABLE  "FORNECEDORES" 
    (	"CNPJ" VARCHAR2(20) NOT NULL ENABLE, 
 	"NOME" VARCHAR2(50) NOT NULL ENABLE, 
