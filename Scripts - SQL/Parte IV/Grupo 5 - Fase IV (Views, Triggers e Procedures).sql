@@ -42,7 +42,7 @@ BEGIN
     FROM compra_produto cp
     WHERE cp.codigo_produto = p.codprod AND cp.codigo_compra = p_codigo_ordem
   );
-END;
+END devolver_estoque;
 
 -- Questão #3:
 
@@ -54,7 +54,7 @@ BEGIN
     FROM ordem_de_compra
     WHERE codigo_produto = p_codigo_produto AND status != 'FINALIZADA'
   );
-END;
+END remover_avaliacao_falsa;
 
 -- Questão #4:
 
@@ -99,7 +99,7 @@ SELECT * FROM vw_clientes_sp_iphone11;
 
 -- Questão #7:
 
-CREATE OR REPLATE TRIGGER trg_baixa_estoque
+CREATE OR REPLACE TRIGGER trg_baixa_estoque
 AFTER INSERT ON COMPRA_PRODUTO
 FOR EACH ROW
 BEGIN
